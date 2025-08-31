@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const text = "We are a Compcode + Web Dev Coding Club";
+    const text = "We are a CompCode + Web Dev Coding Club";
     const target = document.querySelector(".text");
-    target.textContent = ""; // Clear initial text
+    target.textContent = "";
 
     let i = 0;
     function typeWriter() {
