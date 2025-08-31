@@ -7,7 +7,10 @@
 
 body {
     overflow-x: hidden;
-    background-color: rgb(169, 181, 223);
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 /*-- fonts! --*/
@@ -22,7 +25,7 @@ body {
 .gabarito {
     font-family: "Gabarito", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 450;
+    font-weight: 400;
     font-style: normal;
 }
 .gabarito-light {
@@ -37,7 +40,6 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-
 
 .manrope {
     font-family: "Manrope", sans-serif;
@@ -335,4 +337,90 @@ li p:hover {
 ::-webkit-scrollbar-thumb {
     background: rgb(214, 216, 240);
     border-radius: 10px;
+}
+
+/*-- Members Page --*/
+.siteContainer {
+    margin: 2rem auto;
+    max-width: calc(100% - 80px);
+}
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 2rem;
+}
+
+.memberCard {
+    background: white;
+    border-radius: 2rem;
+    width: 17rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    position: relative;
+}
+
+.memberBanner {
+    height: 10rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.memberBanner img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 2rem 2rem 0 0;
+    object-fit: cover;
+}
+
+.memberAvatar {
+    position: absolute;
+    left: 50%;
+    top: 10rem;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    
+}
+
+.memberAvatar img {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.35s cubic-bezier(.4,2,.6,1);
+}
+
+.memberAvatar:hover img {
+    transform: scale(1.2);
+}
+
+.memberInfo {
+    color: #000000;
+    padding: 4.5rem 2rem 0rem 2rem;
+}
+
+.memberInfo h4 {
+    color: #000000;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.memberInfo .position {
+    color: #616161;
+    text-align: center;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
