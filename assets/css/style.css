@@ -113,7 +113,7 @@ li p:hover {
 }
 
 .title {
-    display: block;
+    display: inline-block;
     font-size: clamp(5rem, 8vw, 8rem);
     color: rgb(45, 51, 107);
     text-shadow: 0 0 100px rgb(214, 216, 240);
@@ -129,9 +129,6 @@ li p:hover {
   
 .text {
     overflow: hidden; 
-    white-space: nowrap;
-    /*width: 0; */
-    /* animation: typewriter 4s steps(39) 1s 1 normal both; */
     font-size: clamp(1.3rem, 2vw, 5rem);
     color: rgb(45, 51, 107);
 }
@@ -273,22 +270,15 @@ li p:hover {
 .text1 { 
     position: relative;
     display: inline-block;
-    font-family: Monaco, Arial, Helvetica, sans-serif;
-    line-height: 50px;
-    font-size: 24px;
-    color: white;
-    min-width: 360px;
 }
 .text1::after {
   content: "";
-  position: absolute;
-  top: 0px;
   right: -30px;
   display: inline-block;
   background-color: #d4d8ff;
-  vertical-align: top;
-  width: 18px;
-  height: clamp(5rem, 8vw, 8rem);
+  vertical-align: bottom;
+  width: .2em;
+  height: 1em;
   -webkit-animation: blink 0.9s step-end infinite;
   animation: blink 0.9s step-end infinite;
 }
