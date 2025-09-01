@@ -161,7 +161,7 @@ li p:hover {
     padding: 3vw 3vw 3vw 3vw;
     flex-direction: column;
     align-items: center;
-    text-align: justify;
+    
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
 
