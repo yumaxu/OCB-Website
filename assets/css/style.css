@@ -114,10 +114,17 @@ li p:hover {
 
 .title {
     display: inline-block;
-    font-size: clamp(5rem, 8vw, 8rem);
+    font-size: 8vw;
     color: rgb(45, 51, 107);
     text-shadow: 0 0 100px rgb(214, 216, 240);
     line-height: 1;
+}
+
+.shortTitle {
+    display: none;
+    font-size: 7rem;
+    color: rgb(45, 51, 107);
+    text-shadow: 0 0 100px rgb(214, 216, 240);
 }
 
 .container {
@@ -143,7 +150,7 @@ li p:hover {
     flex-direction: row;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .descriptionContainer {
     flex-direction: column;
   }
@@ -151,13 +158,20 @@ li p:hover {
   .mainTextBox2 {
     display: none;
   }
+
+  .title {
+    display: none;
+  }
+  .shortTitle {
+    display: inline-block;
+  }
 }
 
 .descriptionText {
     background: linear-gradient(to top right, rgb(214, 216, 240, 0.5), rgba(214, 216, 240, 0.1)); 
     background: linear-gradient(to bottom left, rgb(214, 216, 240, 0.5), rgba(214, 216, 240, 0.1)); 
     color: rgb(45, 51, 107);
-    font-size: clamp(1.3rem, 1.7vw, 5rem);
+    font-size: clamp(1.2rem, 1.7vw, 5rem);
     padding: 3vw 3vw 3vw 3vw;
     flex-direction: column;
     align-items: center;
