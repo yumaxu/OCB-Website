@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const text = "We are a CompCode + Web Dev Coding Club";
-    const target = document.querySelector(".text");
+    const target = document.querySelector(".description");
     target.textContent = "";
 
     let i = 0;
